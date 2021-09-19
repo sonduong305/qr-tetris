@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name_of_game">
+          QR TETRIS
+        </div>
+    </div>
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Message here" name="message" id='message' required onkeyup="this.setAttribute('value', this.value);" value=""  />
+        <label for="message" class="form__label">Message here <img class="img_text_input" src="image/heart_pixel.png"></label>
+        <button class="up_image"><img class="up_image_icon" src="image/pngegg.png"></button>
+    </div>
+    <a href="javascript:void(0);">SUBMIT</a>
+
+    <div class="share">
+        <ul class="share-icons">
+            <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/fb_icon.png"></i></li>
+            <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/instagram_icon.png"></i></li>
+            <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/messenger_icon.png"></i></li>
+            <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/twitter_icon.png"></i></li>
+            <li class="share-icons__block">
+              <div class="share-icons__block-left"><i><img class="share-icons__item_img text-primary" src="image/share_icon/share_icon.png"></i></div>
+              <div class="share-icons__block-right"><i><img class="share-icons__item_img text-primary" src="image/share_icon/share_icon.png"></i></div>
+            </li>
+        </ul>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>

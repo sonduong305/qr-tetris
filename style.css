@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family:Minecraft;
+  src:url('fonts/Minecraft.ttf') format('truetype'),
+  url('fonts/Captureit.eot#iefix') format('embedded-opentype'),
+  url('fonts/Captureit.woff') format('woff');
+  font-weight:normal;
+  font-style:normal;
+ }
+:root {
+  
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+  --color-gray: #9b9b9b;
+}
+body{
+  font-family: 'Minecraft';
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;*/
+  align-items: center; 
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: var(--color-white) 
+
+}
+/*name_of_game*/
+.wrapper{
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  font-size: 100px;
+}
+
+.name_of_game {
+  width: 11ch;
+  animation: typing 2s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  0% {
+    border-color: transparent
+  }
+}
+
+/*input text */
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 40%;
+  }
+  
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--color-black-3);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--color-black-3);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-bottom: 50px;
+    padding-right: 42px;
+}
+.form__field::placeholder {
+      color: transparent;
+}
+  
+.form__field :placeholder-shown ~ .form__label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 19px;
+  display: block;
+  font-weight: 300;
+  transition: 0.2s;
+  font-size: 26px;
+  color: var(--color-black-1);
+}
+.form__field:valid {
+  color: var(--color-black-1);
+}
+.form__field:valid + label{
+  position: absolute;
+  top: -10px;
+}
+
+.img_text_input{
+    height: 12px;
+}  
+.form__field:focus ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: var(--color-black-1);
+      font-weight:700;    
+}
+.form__field:focus{
+        padding-bottom: 6px;  
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, var(--color-black-1),var(--color-gray));
+        border-image-slice: 1;
+}
+ 
+/* reset input */
+.form__field:required,form__field:required:invalid { box-shadow:none; }
+
+/* up_img_button */
+.up_image {
+position: absolute;
+top: 10px;
+right: 0px;
+cursor: pointer;
+border: none;
+background: transparent;
+}
+.up_image_icon{
+  width: 42px;
+}
+
+/* button*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Minecraft", sans-serif;
+}
+
+
+a {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black-1);
+  transition: var(--speed-normal);
+  border: 3px solid var(--color-black-1);
+}
+
+ a:hover {
+    color: var(--color-white);
+    border: 3px solid transparent;
+    background: var(--color-black-1) url(image/pixel.png); 
+    transition-delay: 0.5s;
+    background-size: 180px;
+    animation: animate var(--speed-fast) steps(8) forwards;
+  }
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+
+/*Share link*/
+
+.share-icons__item_img{
+  width: 20px;
+}
+.share {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin: 10vh;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.share-icons {
+	position: relative;
+	display: flex;
+	box-shadow: inset 0 -6px 10px -8px rgba(0, 0, 0, 0.3), inset 0 6px 10px -8px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.share-icons__block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateZ(0);
+	transition: transform 0.3s, filter 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.share-icons__block-left, .share-icons__block-right {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: white;
+	transition: 0.6s;
+}
+
+.share-icons__block-left {
+	clip-path: inset(0 50% 0 0);
+}
+
+.share-icons__block-right {
+	clip-path: inset(0 0 0 50%);
+}
+
+.share-icons__item {
+	padding: 0.75rem;
+}
+
+.share-icons:hover  .share-icons__block  {
+	filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+
+.share-icons:hover .share-icons__block-left{
+	transform: translateX(-50%) scale(1.2);
+}
+
+.share-icons:hover  .share-icons__block-right{
+	transform: translateX(50%) scale(1.2);
+}
