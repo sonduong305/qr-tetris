@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -13,12 +16,27 @@
           QR TETRIS
         </div>
     </div>
+   
     <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Message here" name="message" id='message' required onkeyup="this.setAttribute('value', this.value);" value=""  />
-        <label for="message" class="form__label">Message here <img class="img_text_input" src="image/heart_pixel.png"></label>
-        <button class="up_image"><img class="up_image_icon" src="image/pngegg.png"></button>
+        <div class="group_input">
+            <div class="left">
+                <div class="dinosaur_move">
+                    <img id="dinosaur" src="image/gif_dinosaur.gif" >  
+                </div>
+                <img id="fire" src="image/fire_ball_pixel.png" >
+                <img id="sun_flower" src="image/gif_flowers.gif" >
+            </div>
+            <div class="box_input">
+                <input type="input" class="form__field" placeholder="Message here" name="message" id='message' required onkeyup="this.setAttribute('value', this.value);" value=""  />
+                <label for="message" class="form__label">Message here <img class="img_text_input" src="image/heart_pixel.png"></label>
+                <button class="up_image"><img class="up_image_icon" src="image/pngegg.png"></button>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
     </div>
-    <a href="javascript:void(0);">SUBMIT</a>
+    <a href="javascript:void(0);" id="submit_button" onclick="submit();">SUBMIT</a>
 
     <div class="share">
         <ul class="share-icons">
