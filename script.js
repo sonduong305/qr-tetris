@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     console.log("123");
 })
 
@@ -8,21 +8,25 @@ async function submit() {
     console.log(message)
     url = 'https://qr.bysonduong.com/messages';
     var headers = {
-        "Content-Type": "application/json",                                                                                                
+        "Content-Type": "application/json",
         "Access-Control-Origin": "*"
-        }
+    }
     var body = {
         "message": message,
     }
-    
+
     const response = await fetch(url, {
         method: "POST",
         headers: headers,
-        body:  JSON.stringify(body)
+        body: JSON.stringify(body)
     });
     var data = await response.json();
     console.log(data);
     console.log(makeGameURL(data.id))
+
+    const link_display = document.getElementById("link")
+    link_display.href = makeGameURL(data.id);
+    link_display.innerHTML = "Your game link is here!";
     return data;
 }
 
