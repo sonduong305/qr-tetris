@@ -29,7 +29,8 @@
             <div class="box_input">
                 <input type="input" class="form__field" placeholder="Message here" name="message" id='message' required onkeyup="this.setAttribute('value', this.value);" value=""  />
                 <label for="message" class="form__label">Message here <img class="img_text_input" src="image/heart_pixel.png"></label>
-                <button class="up_image"><img class="up_image_icon" src="image/pngegg.png"></button>
+                <button class="up_image" ><img class="up_image_icon" src="image/pngegg.png"></button>
+                <p class="error">Vui lòng nhập dữ liệu nè con choá này</p>
             </div>
             <div class="right">
 
@@ -37,6 +38,40 @@
         </div>
     </div>
     <a href="javascript:void(0);" id="submit_button" onclick="submit();">SUBMIT</a>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="box_modal">
+            <p class="message">Congratulations you have successfully generated QR code</p>
+            <span class="close">&times;</span>
+            <div class="box-link">
+                <div class="box-left">
+                    <img class="QR_img" src="image/gif_flowers.gif">
+                    <p>Your QR</p>
+                </div>
+                <div class="box-right">
+                    <a class="btn1" href="google.com">Let's play Game</a>
+                    <div class="options">
+                       
+                        <div class="share">
+                            <ul class="share-icons">
+                                <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/fb_icon.png"></i></li>
+                                <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/instagram_icon.png"></i></li>
+                                <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/messenger_icon.png"></i></li>
+                                <li class="share-icons__item"><i><img class="share-icons__item_img" src="image/share_icon/twitter_icon.png"></i></li>
+                                <li class="share-icons__block">
+                                <div class="share-icons__block-left"><i> <p>Share this</p><img class="share-icons__item_img text-primary" ></i></div>
+                                <div class="share-icons__block-right"><i> <p>Share this</p><img class="share-icons__item_img text-primary"></i></div>
+                                </li>
+                            </ul>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
 
     <div class="share">
         <ul class="share-icons">
