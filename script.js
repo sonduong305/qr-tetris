@@ -11,17 +11,17 @@ async function submit() {
     var headers = {
         "Content-Type": "application/json",
         "Access-Control-Origin": "*"
-        }
+    }
     var mes = {
         "message": message,
     }
 
 
-    if(message){
-         /*pop_up non message*/
+    if (message) {
+        /*pop_up non message*/
         // Get the modal
         var modal = document.getElementById("myModal");
-        
+
         // Get the button that opens the modal
         var btn = document.getElementById("submit_button");
 
@@ -30,50 +30,39 @@ async function submit() {
 
         // get the link of QR tetris to play game
         var QRlink = document.querySelector("#myModal a.btn1");
-     
+
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        span.onclick = function () {
             console.log("ok");
             modal.style.display = "none";
-         
-        
+
+
         }
-     
+
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
-             
+
             }
         }
-        
+
         //post data
 
-        // const response = await fetch(url, {
-        //     method: "POST",
-        //     headers: headers,
-        //     body:  JSON.stringify(body)
-        // });
-        // var data = await response.json();
-        // console.log(data);
-        // console.log(makeGameURL(data.id))
-        // return data;
-       
-        fetch(url, {
+        const response = await fetch(url, {
             method: "POST",
             headers: headers,
-            mes:  JSON.stringify(mes)
-        }).then(response=>{
-            var data = response.json();
-            console.log(data);
-            console.log(makeGameURL(data.id))
-            //return data;
-            QRlink.href = data.link; 
-            modal.style.display = "flex ";
-        }).catch(error=>{
-            console.log(error);
+            body: JSON.stringify(mes)
         });
-    }else{
+        var data = await response.json();
+
+        const link = makeGameURL(data.id);
+        QRlink.href = link;
+        modal.style.display = "flex ";
+
+        return data;
+
+    } else {
         error.style.display = "block";
     }
 }
