@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     console.log("123");
 })
 
@@ -9,7 +9,7 @@ async function submit() {
     console.log(message)
     url = 'https://qr.bysonduong.com/messages';
     var headers = {
-        "Content-Type": "application/json",                                                                                                
+        "Content-Type": "application/json",
         "Access-Control-Origin": "*"
         }
     var mes = {
@@ -81,4 +81,3 @@ async function submit() {
 function makeGameURL(gameID) {
     return `https://bysonduong.com/qr-tetris/game/?id=${gameID}`
 }
-
